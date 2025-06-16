@@ -1,0 +1,6 @@
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.LocationController">
+    <Label text="Welcome to Thaba-Bosiu!" layoutX="20" layoutY="20" />
+    <MediaView fx:id="videoView" layoutX="20" layoutY="50" fitWidth="400" fitHeight="250"/>
+    <Button layoutX="450" layoutY="60" text="Play Audio" onAction="#playAudio"/>
+    <Button layoutX="450" layoutY="100" text="Take Quiz" onAction="#openQuiz"/>
+</AnchorPane>

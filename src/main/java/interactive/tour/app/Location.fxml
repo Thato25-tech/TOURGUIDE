@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="interactive.tour.app.LocationController" stylesheets="/styles/app.css">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    
+    <top>
+        <VBox spacing="10" alignment="CENTER">
+            <Text fx:id="txtLocationName" styleClass="location-text"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="btnBack" text="Back to Home" styleClass="back-button" onAction="#goBackToHome"/>
+                <Button fx:id="btnPlayAudio" text="Play Audio Guide" styleClass="media-button" onAction="#toggleAudio"/>
+                <Button fx:id="btnTakeQuiz" text="Take Quiz" styleClass="quiz-button" onAction="#openQuiz"/>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <center>
+        <VBox spacing="20" alignment="CENTER" styleClass="content-pane">
+            <MediaView fx:id="videoView" fitWidth="800" fitHeight="450" styleClass="media-view"/>
+            
+            <ScrollPane fitToWidth="true" prefHeight="200">
+                <VBox spacing="10">
+                    <Text fx:id="txtLocationDescription" styleClass="location-description" wrappingWidth="780"/>
+                </VBox>
+            </ScrollPane>
+            
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="btnPlayVideo" text="Play Video" styleClass="media-button" onAction="#playVideo"/>
+                <Button fx:id="btnPauseVideo" text="Pause Video" styleClass="media-button" onAction="#pauseVideo"/>
+                <Button fx:id="btnRewindVideo" text="Rewind" styleClass="media-button" onAction="#rewindVideo"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane> 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="interactive.tour.app.HomeController" spacing="20" alignment="CENTER" stylesheets="/styles/app.css">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    
+    <Text text="Lesotho Interactive Tour Guide" styleClass="header-text"/>
+    <Text text="Explore the Mountain Kingdom" styleClass="subheader-text"/>
+    
+    <MediaView fx:id="mediaView" fitWidth="800" fitHeight="400" />
+    
+    <Text text="Select a destination to explore:" styleClass="section-text"/>
+    
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Button fx:id="btnThabaBosiu" text="Thaba Bosiu" styleClass="location-button" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Button fx:id="btnSehlabathebe" text="Sehlabathebe National Park" styleClass="location-button" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Button fx:id="btnMaseru" text="Maseru City" styleClass="location-button" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Button fx:id="btnKatseDam" text="Katse Dam" styleClass="location-button" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Button fx:id="btnPioneerMall" text="Pioneer Shopping Mall" styleClass="location-button" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    </GridPane>
+</VBox> 

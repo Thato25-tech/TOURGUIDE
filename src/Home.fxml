@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="interactive.tour.app.HomeController" spacing="20" alignment="CENTER">
+    <Text text="Lesotho Interactive Tour Guide" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    
+    <Button fx:id="btnThabaBosiu" text="Thaba Bosiu" style="-fx-font-size: 18px;"/>
+    <Button fx:id="btnSehlabathebe" text="Sehlabathebe" style="-fx-font-size: 18px;"/>
+    
+    <MediaView fx:id="mediaView" fitWidth="600" fitHeight="400" />
+</VBox>

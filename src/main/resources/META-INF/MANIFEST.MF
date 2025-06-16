@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Main-Class: interactive.tour.app.Main
+Class-Path: .
+Created-By: JavaFX Application
+Implementation-Title: Interactive Tour App
+Implementation-Version: 1.0
+Implementation-Vendor: DMAICT
+
