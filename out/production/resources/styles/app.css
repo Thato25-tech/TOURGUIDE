@@ -1,0 +1,297 @@
+/* Global Styles */
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #1a2a6c, #b21f1f, #fdbb2d);
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Header Text Styles */
+.header-text {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-fill: #2c3e50;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+.subheader-text {
+    -fx-font-size: 18px;
+    -fx-fill: #34495e;
+    -fx-opacity: 0.9;
+}
+
+/* Button Styles */
+.button {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 24;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0, 0, 3);
+}
+
+.button:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* Map Button Special Style */
+.map-button {
+    -fx-background-color: linear-gradient(to bottom, #2ecc71, #27ae60);
+    -fx-font-size: 15px;
+    -fx-padding: 12 25;
+    -fx-min-width: 200px;
+    -fx-min-height: 45px;
+}
+
+.map-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #27ae60, #219a52);
+}
+
+/* Location Button Special Style */
+.location-button {
+    -fx-background-color: linear-gradient(to bottom, #e74c3c, #c0392b);
+    -fx-font-size: 14px;
+    -fx-min-height: 45px;
+    -fx-min-width: 180px;
+    -fx-padding: 10 20;
+}
+
+.location-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #c0392b, #a93226);
+}
+
+/* Section Text Style */
+.section-text {
+    -fx-font-size: 16px;
+    -fx-fill: #7f8c8d;
+    -fx-font-style: italic;
+}
+
+/* MediaView Container Style */
+.media-view-container {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-background-radius: 12px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 15, 0, 0, 3);
+}
+
+/* GridPane Style */
+.grid-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { -fx-opacity: 0; }
+    to { -fx-opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { -fx-translate-y: 20; -fx-opacity: 0; }
+    to { -fx-translate-y: 0; -fx-opacity: 1; }
+}
+
+/* Apply animations to elements */
+.header-text {
+    -fx-animation: fadeIn 1s ease-out;
+}
+
+.subheader-text {
+    -fx-animation: slideIn 1s ease-out 0.2s;
+}
+
+.button {
+    -fx-animation: slideIn 0.5s ease-out;
+}
+
+/* Hover effects for text */
+.text:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-transition: all 0.3s ease;
+}
+
+/* Focus styles for better accessibility */
+.button:focused {
+    -fx-border-color: rgba(255, 255, 255, 0.4);
+    -fx-border-width: 2px;
+}
+
+/* Disabled state styles */
+.button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+/* Responsive text sizing */
+@media (max-width: 800px) {
+    .header-text {
+        -fx-font-size: 24px;
+    }
+    
+    .subheader-text {
+        -fx-font-size: 16px;
+    }
+    
+    .button {
+        -fx-font-size: 12px;
+        -fx-padding: 10 20;
+    }
+    
+    .map-button {
+        -fx-font-size: 14px;
+        -fx-padding: 10 20;
+        -fx-min-width: 180px;
+        -fx-min-height: 40px;
+    }
+    
+    .location-button {
+        -fx-font-size: 13px;
+        -fx-min-width: 160px;
+        -fx-min-height: 40px;
+        -fx-padding: 8 16;
+    }
+    
+    .media-view-container {
+        -fx-max-height: 250px;
+    }
+    
+    .media-view {
+        -fx-fit-height: 200px;
+    }
+}
+
+/* Text Styles */
+.location-text {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+.location-description {
+    -fx-font-size: 16px;
+    -fx-fill: rgba(255, 255, 255, 0.9);
+    -fx-line-spacing: 8px;
+}
+
+/* Media View Styles */
+.media-view {
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);
+}
+
+/* Container Styles */
+.content-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1px;
+    -fx-padding: 25px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 20, 0, 0, 5);
+    -fx-background-insets: 10;
+}
+
+.media-button {
+    -fx-background-color: rgba(46, 204, 113, 0.8);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 12 24;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: rgba(46, 204, 113, 0.3);
+}
+
+.media-button:hover {
+    -fx-background-color: rgba(46, 204, 113, 0.9);
+}
+
+.back-button {
+    -fx-background-color: rgba(52, 152, 219, 0.8);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 12 24;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: rgba(52, 152, 219, 0.3);
+}
+
+.back-button:hover {
+    -fx-background-color: rgba(52, 152, 219, 0.9);
+}
+
+.quiz-button {
+    -fx-background-color: rgba(155, 89, 182, 0.8);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 12 24;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: rgba(155, 89, 182, 0.3);
+}
+
+.quiz-button:hover {
+    -fx-background-color: rgba(155, 89, 182, 0.9);
+}
+
+/* Pause Button Styles */
+.pause-button {
+    -fx-background-color: rgba(231, 76, 60, 0.8);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 12 24;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: rgba(231, 76, 60, 0.3);
+}
+
+.pause-button:hover {
+    -fx-background-color: rgba(231, 76, 60, 0.9);
+}
+
+.pause-button:disabled {
+    -fx-opacity: 0.6;
+    -fx-cursor: default;
+}
+
+/* ScrollPane Styling */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Apply animations */
+.location-text {
+    -fx-animation: fadeIn 1s ease-out;
+}
+
+.location-description {
+    -fx-animation: slideIn 1s ease-out 0.2s;
+}
+
+.button {
+    -fx-animation: slideIn 0.5s ease-out;
+} 
